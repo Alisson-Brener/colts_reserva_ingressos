@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Colts - Ingressos</title>
+
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="./css/componentes/cabecalho.css">
+		<link rel="stylesheet" href="css/style_colts.css">
+		<link rel="stylesheet" href="./css/componentes/cartao.css">
+		<link rel="stylesheet" href="./css/componentes/inputs.css">
+		<link rel="stylesheet" href="./css/componentes/botao.css">
+		<link rel="stylesheet" href="css/reserva_ingresso.css">
+	</head>
+
+    <body>
+
+		<header>
+			<div class="cabecalho">
+				<h1><img class="logo" src="img/colts-logo.png"></h1>
+
+				<nav>
+					<ul>
+						<li><a href="colts_home.html">Home</a></li>
+						<li><a href="colts_record.html">Leaders</a></li>
+                        <li><a href="ingressos.html">Ingressos</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main class="container flex flex--centro flex--coluna">
+			<section class="mapa-indianapolis">
+				<h3>Lucas Oil Stadium</h3>
+
+				<div class="mapa-conteudo">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.0892363791036!2d-86.16607638467582!3d39.76010480323488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b50a5f3e4ada5%3A0xcc345a26d33f09e1!2sLucas%20Oil%20Stadium!5e0!3m2!1spt-BR!2sbr!4v1655659548627!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+			</section>
+			<section class="cartao cadastro">
+				<h1 class="cartao__titulo">Reserve seu ingresso</h1>
+				<form action="./reserva_concluida.html" class="flex flex--coluna" id="form">
+					<div class="input-container">
+						<input name="nome" id="nome" class="input" type="text" placeholder="Nome" data-tipo="nome" required>
+						<label class="input-label" for="nome">Nome</label>
+						<span class="input-mensagem-erro">Este campo não está válido</span>
+					</div>
+					<div class="input-container">
+                        <input name="email" id="email" class="input" type="email" placeholder="Email" data-tipo="email" required>
+                        <label class="input-label" for="email">Email</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+					<div class="input-container cadastro__descricao-container">
+						<input class="input" name="quantidade" id="quantidade" placeholder="Quantidade" pattern="[\d]" required>
+						<label class="input-label" for="quantidade">Quantidade</label>
+						<span class="input-mensagem-erro">Preencha este campo apenas com números</span>
+					</div>
+					<div>
+						<fieldset>
+							<legend class="input-container">Posição no Lucas Oil Stadium</legend>
+							<select id="local">
+								<option value="150">Leste Inferior</option>
+								<option value="120">Leste Superior</option>
+								<option value="150">Oeste Inferior</option>
+								<option value="120">Oeste Superior</option>
+								<option value="110">Norte Inferior</option>
+								<option value="90">Norte Superior</option>
+								<option value="110">Sul Inferior</option>
+								<option value="90">Sul Superior</option>
+							</select>
+						</fieldset>
+					</div>
+					<section class="output-preco">
+						<h3>Preço no momento($)</h3>
+						<p class="preco">0</p>
+					</section>
+					<button class="botao">Reservar Ingressos(s)</button>
+				</form>
+			</section>
+			
+		</main>
+    <script src="./js/app.js" type="module"></script>
+	<script src="js/calcula-preco.js"></script> 
+    <footer>
+        <img class="logo-footer" src="img/colts-logo.png">
+        <p class="copyright">Siga-nos no Twitter!</p>
+        <a href="https://twitter.com/colts_brazil"> @Colts_brazil</a>
+        <a href="https://twitter.com/Colts"> @Colts</a>
+    </footer>
+</body>
+</html>
